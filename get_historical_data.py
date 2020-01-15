@@ -67,7 +67,7 @@ def get_cookie_crumb(symbol):
 
 
 def get_data(symbol, start_date, end_date, cookie, crumb):
-    filename = "C:/Users/Nils/Documents/ma200/historical_data/%s.csv" % (symbol)
+    filename = "C:/Users/Nils/Documents/StockNotifier/historical_data/%s.csv" % (symbol)
     url = "https://query1.finance.yahoo.com/v7/finance/download/%s?period1=%s&period2=%s&interval=1d&events=history&crumb=%s" % (symbol, start_date, end_date, crumb)
     response = requests.get(url, cookies=cookie)
     with open (filename, 'wb') as handle:
