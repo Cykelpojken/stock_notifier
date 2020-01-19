@@ -20,5 +20,10 @@ def test(company):
 
 def run():     
     for company in constants.large_cap:
-        print("Doing stuff for: " + company)
+        print("Fetching: " + company)
         threading.Thread(target = test, args = [company], daemon = True).start()
+        time.sleep(0.13)
+
+
+if __name__ == "__main__":
+    run()
